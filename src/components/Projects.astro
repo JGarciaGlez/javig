@@ -1,6 +1,14 @@
 ---
-import projects from '../../api/projects.json';
+import projects from '../../public/projects.json';
 import ProjectCard from './ProjectCard.astro';
+
+
+type ProjectType = {
+    name: string
+    description: string
+    github: string
+    url: string
+}
 ---
 
-{projects.map((project) => <ProjectCard {...project} />)}
+{projects.map((project : ProjectType) => <ProjectCard {...project} />)}
