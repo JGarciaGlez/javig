@@ -1,0 +1,6 @@
+---
+import projects from '../../api/projects.json';
+import ProjectCard from './ProjectCard.astro';
+---
+
+{projects.map((project) => <ProjectCard {...project} />)}

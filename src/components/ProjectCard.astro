@@ -1,0 +1,26 @@
+---
+import Link from "../icons/Link.astro";
+import GithubIcon from "../icons/GithubIcon.astro";
+
+const { id, name, description, github, url } = Astro.props;
+---
+<div class="flex flex-wrap text-center justify-between items-center w-[220px] h-[300px] mx-auto bg-black shadow-sm rounded-xl hover:bg-[#0b0b0b]">
+			<article class="text-wrap break-all w-[200px]">
+		 <h1 class="text-xl text-white font-bold text-center pl-5">{name}</h1>
+    <div class="text-left pl-4 text-white mt-5 pb-3 h-20 text-wrap"> {description}.</div>
+	</article>
+    <section class="size-10 flex text-center justify-around w-full pt-8 ">
+      <span class="flex justify-between items-center ">
+        <a href={github} target="_blank" rel="nofollow noreferrer" class="size-6">
+          <GithubIcon />
+        </a>
+      </span>
+      <span class="flex flex-row justify-between items-center">
+        <a href={url} target="_blank" rel="nofollow noreferrer"  class="size-6">
+          <Link/>
+        </a>
+      </span>
+    </section>
+	</div>
+
+</div>
