@@ -2,7 +2,8 @@
 interface Props {
 	title: string;
 }
-
+import '@fontsource/onest/400.css';
+import Header from '../components/Header.astro';
 const { title } = Astro.props;
 ---
 
@@ -16,7 +17,8 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body >
+		<Header/>
 		<slot />
 	</body>
 </html>
@@ -33,19 +35,9 @@ const { title } = Astro.props;
 		);
 	}
 	html {
-		font-family: system-ui, sans-serif;
+  		font-family: 'Onest', sans-serif;	
 		background: #13151a;
 		background-size: 224px;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+	
 </style>

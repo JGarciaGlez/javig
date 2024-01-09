@@ -1,13 +1,18 @@
 ---
-import { getI18N } from "@/i18n"
-import projects from "../../public/projects.json";
+import projects from "../../../public/projects.json";
 import ProjectCard from "@/components/ProjectCard.astro";
 import Layout from "@/layouts/Layout.astro";
+import { getI18N } from "@/i18n"
+
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
+
+
 <Layout title={i18n.SEO_TITLE}>
   <main class="w-[600px] grid grid-cols-2 md:grid-cols-3 mx-auto items-center justify-between gap-20 pb-44">
     {projects?.map((project) => <ProjectCard {...project}/>)}
   </main>
 </Layout>
+
+
