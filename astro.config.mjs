@@ -3,6 +3,8 @@ import tailwind from "@astrojs/tailwind";
 import { defineConfig } from 'astro/config';
 import cloudflare from "@astrojs/cloudflare";
 
+import netlify from "@astrojs/netlify";
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), mdx()],
@@ -14,5 +16,5 @@ export default defineConfig({
     }
   },
   output: "server",
-  adapter: cloudflare()
+  adapter: netlify()
 });
