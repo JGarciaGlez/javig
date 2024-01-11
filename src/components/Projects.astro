@@ -2,7 +2,6 @@
 import projects from '../../public/projects.json';
 import ProjectCard from './ProjectCard.astro';
 
-
 type ProjectType = {
     name: string
     description: string
@@ -10,5 +9,4 @@ type ProjectType = {
     url: string
 }
 ---
-
 {projects.map((project : ProjectType) => <ProjectCard {...project} />)}
